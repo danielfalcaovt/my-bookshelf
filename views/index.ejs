@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>My Bookshelf</title>
+</head>
+<body>
+    <header>
+        <h1 draggable="true">MY BOOKSHELF</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#my-ratings">Ratings</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://github.com/danielfalcaovt">Github</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="my-ratings">
+            <h1>My ratings</h1>
+
+            <div class="container">
+                <div id="receiver">
+                <%if (locals.data){%>
+                    <%locals.data.forEach((item) =>{%>
+                        
+                        <div>
+                            <h2 class="container-title">
+                                <%=item.bookname%>
+                            </h2>
+                            <img src=<%="https://covers.openlibrary.org/b/isbn/"+ item.isbn + "-M.jpg"%> alt="book cover" >
+                            <p class="container-rating">
+                                <%=item.rating%>
+                                / 10
+                            </p>
+                            <p class="container-note">
+                                <%=item.note%>
+                            </p>
+                        </div>
+                           <hr />
+                        <%})%>
+                     
+                        <%}else{console.log("Database not found.");}%>
+                        </div>
+                    </div>
+            
+        </section>
+    </main>
+</body>
+</html>

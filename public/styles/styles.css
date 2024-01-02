@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background: #272727;
+}
+header{
+    background: #181818;
+    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.16);
+    height: 15vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+}
+header h1{
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: white;
+    font-family: "Work Sans",cursive;
+    font-weight: bold;
+    text-align: center;
+}
+header ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+header a {
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 25px;
+    min-width: 80px;
+}
+header a:hover{
+    background-color: white;
+    color: black;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 50vh;
+}
+section{
+    grid-area: 1/2/1/3;
+}
+section h1{
+    color: white;
+    font-size: 1.4rem;
+    font-family: "Work Sans",Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    margin: 15px;
+}
+.container{
+    position: relative;
+    height: max-content;
+    width: 100%;
+}
+#receiver{
+    box-shadow: inset 0px 0px 4px 4px rgba(0, 0, 0, 0.076);
+    padding-top: 1px;
+    min-width: 300px;
+}
+#receiver>div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin: 50px;
+   
+}
+.container-title{
+    color: white;
+    font-family: "Work Sans",Arial, Helvetica, sans-serif;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+img{
+width: 100px;
+grid-area: 1/1/4/1;
+}
+.container-note{
+    color: white;
+    font-size: 1.4rem;
+}
+.container-rating{
+    color: white;
+    font-size: 1.2rem;
+}
+.container-rating:before{
+    content:"⭐";
+}
+section hr{
+    background-color: black;
+    border: none;
+    height: 1px;
+}
+
+@media screen and (max-width:500px){
+   header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+   header h1{
+    font-size: 1.2rem;
+   }
+   header ul li {
+    font-size: 0.9rem;
+    margin-left: 15px;
+}
+#receiver > div{
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 0.3fr 0.3fr 0.3fr;
+}
+img{
+    width: 80px;
+    grid-area: 1/1/1/1;
+}
+.container-title{
+    font-size: 1.2rem;
+    grid-area: 2/1/2/3;
+    margin: 0px;
+}
+.container-note {
+    font-size: 1.1rem;
+    grid-area: 4/1/4/3;
+}
+.container-rating{
+    grid-area: 3/1/3/3;
+    font-size: 1rem;
+}
+}
