@@ -1,7 +1,6 @@
 <h1>Bookshelf Project</h1>
 
 <p>There are in this project all the books there i had read until nowadays and rate it.</p>
-![image](https://github.com/danielfalcaovt/my-bookshelf/assets/146419346/a6f30a47-dd3c-489b-830a-211919849e68)
 
 <p>How to visit:</p>
 
@@ -11,3 +10,5 @@
   <li>Open bash terminal and use "nodemon" to render "index.js" like this: "nodemon index.js"</li>
   <li>After this open the page "localhost:3000" inside your browser and voialá</li>
 </ol>
+
+![image](https://github.com/danielfalcaovt/my-bookshelf/assets/146419346/a6f30a47-dd3c-489b-830a-211919849e68)
