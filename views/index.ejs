@@ -4,29 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
-    <title>My Bookshelf</title>
+    <title>Bookshelf</title>
 </head>
 <body>
     <header>
-        <h1 draggable="true">MY BOOKSHELF</h1>
         <nav>
-            <ul>
-                <li>
-                    <a href="#my-ratings">Ratings</a>
-                </li>
-                <li>
-                    <a target="_blank" href="https://github.com/danielfalcaovt">Github</a>
-                </li>
-            </ul>
+            <a id="title" href="/">
+                <h1 draggable="true">BOOKSHELF</h1>
+            </a>
+
+            <form action="/" method="post" autocomplete="off">
+                <input placeholder="Search for a book..." type="text" name="search" id="search">
+            </form>
+            
+             <a class="button" target="_blank" href="https://github.com/danielfalcaovt">
+                <div id="ham--lineUp"></div>
+                <div id="ham--lineDown"></div>
+            </a>  
         </nav>
     </header>
+    <section id="greetings">
+        <article>
+            <h1>Welcome to my Bookshelf.</h1>
+            <p>There are all the books i’ve read in all my days on earth and what i’d thought about them. just remember that i am not a professional book rater. i am just a developer and curious guy. 😉</p>
+            <p>I Hope you have fun acrossing this project!</p>
+        </article>
+    </section>
     <main>
         <section id="my-ratings">
-            <h1>My ratings</h1>
-
             <div class="container">
                 <div id="receiver">
-                <%if (locals.data){%>
+                    <%if (locals.data){%>
+                    
                     <%locals.data.forEach((item) =>{%>
                         
                         <div>
