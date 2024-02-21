@@ -10,7 +10,12 @@
     <li>How to run the backend:
     <ol>
     <li>first of all install the "backend" folder inside your computer and make sure that is in the same directory of "frontend" folder.</li>
-    <li></li>
+    <li>make sure all th dependencies are installed</li>
+    <li>inside your bash you'll need to run: <ol>
+        <li>npm run build</li>
+        <li>npm run dev</li>
+    </ol></li>
+        <li>when your server and typescript already running:</li>
     </ol>
     </li>
     <li>How to run the frontend:
