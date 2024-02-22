@@ -37,7 +37,6 @@ app.get("/", async (req, res) => {
 app.get("/getData", async (req, res) => {
     const data = await db.query("SELECT * FROM books");
     const books = data.rows;
-    console.log(req.body);
     res.json({ data: books });
 });
 
@@ -59,16 +58,17 @@ app.post("/", async (req, res) => {
     }
 });
 app.post("/getData",async(req,res)=>{
-    const userSearched:string = req.body.search.trim();
-    try {
+        console.log(req.body);
+        const userSearched:string = req.body.searching;
+     try {
         const searched = await db.query(
             `SELECT * FROM books WHERE LOWER(bookname) LIKE '${userSearched.toLowerCase()}%'`
         );
         const result = searched.rows;
             res.json({data:result})
-    } catch (err) {
+        } catch (err) {
         console.log(err);
-        res.redirect("/");
+        res.json({error:"Data not found."})
     }
 });
 

@@ -1,72 +1,113 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400&display=swap');
 
-*{
+* {
     padding: 0px;
     margin: 0px;
     font-family: "Work Sans", Arial, Helvetica, sans-serif;
 }
-body{
-    background: linear-gradient(to right,#272727,#181818);
+
+body {
+    background: linear-gradient(to right, #272727, #181818);
     height: max-content;
+    overflow: auto;
 }
-header{
+
+header {
     background: #181818;
     box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.16);
     height: 15vh;
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    z-index: 10;
 }
-nav{
+
+nav {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
-nav h1{
+
+nav h1 {
     font-size: 1.5rem;
     color: white;
-    font-family: "Work Sans",cursive;
+    font-family: "Work Sans", cursive;
     font-weight: bold;
     text-align: center;
 }
-.button:hover{
+
+.button:hover {
     color: rgba(255, 255, 255, 0.819);
 }
-#title{
-  display: flex;
-  align-items:center;
-  justify-content: flex-start;
-  text-decoration: none;
-  margin-left: 25px;
+
+#title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    margin-left: 25px;
 }
-#title > h1:hover{
+
+#title>h1:hover {
     color: rgb(209, 209, 209);
 }
-form{
+
+form {
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
 }
-#search{
+
+#search {
     border-radius: 7px;
     border: 1px solid rgba(0, 0, 0, 0.625);
     width: 70%;
-    height: 3.3vh;
-    background: linear-gradient(to right,#303030,#232323);
+    height: 4.6vh;
+    background: linear-gradient(to right, #303030, #232323);
     color: white;
     text-indent: 10px;
+    transition-duration: 0.3s;
 }
-#search::placeholder{
+
+#search:hover{
+    transform: scale(1.02);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.452);
+}
+
+#search:focus{
+    outline: 0px;
+    transform:scale(1.02);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.452);
+}
+
+#search::placeholder {
     color: #67676792;
     text-indent: 10px;
     font-weight: bold;
 }
-.button{
+
+.button {
     position: relative;
 }
-#ham--lineUp{
-    background:linear-gradient(to right, #464646, #303030);
+
+svg {
+    position: absolute;
+    transition-duration: 0.3s;
+    right: 25px;
+}
+
+svg:hover {
+    transform: scale(1.1);
+}
+
+svg:not(:hover) {
+    transform: scale(1);
+}
+
+#ham--lineUp {
+    background: linear-gradient(to right, #464646, #303030);
     height: 7px;
     width: 45px;
     position: absolute;
@@ -76,8 +117,9 @@ form{
     border-radius: 7px;
 
 }
-#ham--lineDown{
-    background:linear-gradient(to right, #464646, #303030);
+
+#ham--lineDown {
+    background: linear-gradient(to right, #464646, #303030);
     height: 7px;
     width: 45px;
     position: absolute;
@@ -85,155 +127,239 @@ form{
     right: 25px;
     border-radius: 7px;
 }
-.button:hover #ham--lineDown{
-    background:linear-gradient(to right, #4a4a4a, #5b5b5b);
+
+.button:hover #ham--lineDown {
+    background: linear-gradient(to right, #4a4a4a, #5b5b5b);
 }
-.button:hover #ham--lineUp{
-    background:linear-gradient(to right, #4a4a4a, #5b5b5b);
+
+.button:hover #ham--lineUp {
+    background: linear-gradient(to right, #4a4a4a, #5b5b5b);
 }
 
 
 /* MAIN CSS */
-main{
+main {
     display: grid;
     height: max-content;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 50vh;
 }
 
 /*GREETINGS SECTION*/
-#greetings{
+#greetings {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
-article{
+
+article {
     max-width: 60vw;
     color: white;
 }
-#greetings h1{
+
+#greetings h1 {
     font-size: 2.4rem;
 }
-#greetings  p{
+
+#greetings p {
     margin-top: 50px;
     font-size: 1.7rem;
 }
 
-#my-ratings{
+#my-ratings {
     height: max-content;
     grid-area: 1/2/1/3;
 }
-#my-ratings h1{
+
+#my-ratings h1 {
     color: white;
     font-size: 1.4rem;
-    font-family: "Work Sans",Arial, Helvetica, sans-serif;
+    font-family: "Work Sans", Arial, Helvetica, sans-serif;
     font-weight: 200;
     margin: 15px;
 }
-.container{
+
+.container {
     position: relative;
     height: max-content;
     width: 100%;
 }
-#receiver{
+
+#receiver {
     box-shadow: inset 0px 0px 9.1px 5px rgba(0, 0, 0, 0.252);
-    background: linear-gradient(to right,#272727,#181818);
+    background: linear-gradient(to right, #272727, #181818);
     padding-top: 1px;
     min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-#receiver>div{
+
+#receiver>div {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     margin: 50px;
-   
+
 }
-.container-title{
+
+.container-title {
     color: white;
-    font-family: "Work Sans",Arial, Helvetica, sans-serif;
+    font-family: "Work Sans", Arial, Helvetica, sans-serif;
     margin-bottom: 15px;
     margin-top: 15px;
 }
-img{
-width: 100px;
-grid-area: 1/1/4/1;
+
+img {
+    width: 100px;
+    grid-area: 1/1/4/1;
 }
-.container-note{
+
+.container-note {
     font-weight: 200;
     color: white;
     font-size: 1.4rem;
 }
-.container-rating{
+
+.container-rating {
     color: white;
     font-size: 1.2rem;
 }
-.container-rating:before{
-    content:"⭐";
+
+.container-rating:before {
+    content: "⭐";
 }
-section hr{
+
+section hr {
     background-color: black;
     border: none;
     height: 1px;
 }
 
-@media screen and (max-width:500px){
-   header{
+footer{
+    position: relative;
+    bottom: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 30vh;
+    margin-top: 15px;
+    background: linear-gradient(to right, #060606 10%, #141414 40%);
+}
+
+footer > #copyright{
+    grid-area: 1/1/1/2;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-   }
-   header h1{
-    font-size: 1.2rem;
-   }
-   header ul li {
-    font-size: 0.9rem;
+    height: 100%;
+    color: rgba(255, 255, 255, 0.466);
+    font-size: 1.5rem;
+    font-weight: lighter;
     margin-left: 15px;
 }
-#receiver > div{
-    grid-template-columns: 1fr;
-    grid-template-rows: 2fr 0.3fr 0.3fr 0.3fr;
-}
-img{
-    width: 80px;
-    grid-area: 1/1/1/1;
-}
-.container-title{
-    font-size: 1.2rem;
-    grid-area: 2/1/2/3;
-    margin: 0px;
-}
-.container-note {
-    font-size: 1.1rem;
-    grid-area: 4/1/4/3;
-}
-.container-rating{
-    grid-area: 3/1/3/3;
-    font-size: 1rem;
-}
-#search{
-    width: 100%;
-    margin: 5px;
 
+footer > #socialmedia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-article:has(p){
-    max-width: 80vw;
+
+footer > #socialmedia h1{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.5rem;
+    font-weight: lighter;
 }
-#greetings h1{
-    font-size: 2rem;
+
+footer > #socialmedia > ul{
+    list-style: none;
 }
-#greetings p {
-    font-size: 1.1rem;
+
+#socialmedia ul li {
+    margin-top: 5px;
+    text-align: center;
 }
-nav h1{
-    font-size: 1rem;
-    text-indent: -15px;
+
+#socialmedia ul li a:hover{
+    color: white;
 }
-#ham--lineUp{
-    width: 35px;
+
+#socialmedia > ul li a{
+    color: rgba(255, 255, 255, 0.507);
+    transition-duration: 0.3s;
+    font-weight: lighter;
 }
-#ham--lineDown{
-    width: 35px;
-}
+
+@media screen and (max-width:500px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    header ul li {
+        font-size: 0.9rem;
+        margin-left: 15px;
+    }
+
+    #receiver>div {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 0.3fr 0.3fr 0.3fr;
+    }
+
+    img {
+        width: 80px;
+        grid-area: 1/1/1/1;
+    }
+
+    .container-title {
+        font-size: 1.2rem;
+        grid-area: 2/1/2/3;
+        margin: 0px;
+    }
+
+    .container-note {
+        font-size: 1.1rem;
+        grid-area: 4/1/4/3;
+    }
+
+    .container-rating {
+        grid-area: 3/1/3/3;
+        font-size: 1rem;
+    }
+
+    #search {
+        width: 100%;
+        margin: 5px;
+    }
+
+    article:has(p) {
+        max-width: 80vw;
+    }
+
+    #greetings h1 {
+        font-size: 2rem;
+    }
+
+    #greetings p {
+        font-size: 1.1rem;
+    }
+
+    nav h1 {
+        font-size: 1rem;
+        text-indent: -15px;
+    }
+
+    #ham--lineUp {
+        width: 35px;
+    }
+
+    #ham--lineDown {
+        width: 35px;
+    }
 }

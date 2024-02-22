@@ -4,11 +4,26 @@ export default function Main(props) {
         <section id="my-ratings">
             <div className="container">
                 <div id="receiver">
-                {props.data?props.data.data.map((item)=>{
-                    return (
+                {props.iso ? <>
+                    <div>
+                            <h2 class="container-title">
+                                {props.iso.bookname}
+                            </h2>
+                            <img src={"https://covers.openlibrary.org/b/isbn/"+ props.iso.isbn + "-M.jpg"} alt="book cover" />
+                            <p class="container-rating">
+                                {props.iso.rating}
+                                / 10
+                            </p>
+                            <p class="container-note">
+                                {props.iso.note}
+                            </p>
+                        </div>
+                           <hr />
+                    </>
+                 : props.data && props.data.data.map((item)=>{
+                return(
                     <>
-                        <div
-                        >
+                        <div>
                             <h2 class="container-title">
                                 {item.bookname}
                             </h2>
@@ -21,11 +36,10 @@ export default function Main(props) {
                                 {item.note}
                             </p>
                         </div>
-
                            <hr />
                     </>
-                    )
-                }):"Data not found."}
+                )
+                })}
                 </div>
             </div>
         </section>
