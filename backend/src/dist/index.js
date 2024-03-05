@@ -27,44 +27,25 @@ app.use(cors());
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
-app.get("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const data = yield db.query("SELECT * FROM books");
-    const books = data.rows;
-    res.render("index.ejs", {
-        data: books,
-    });
-}));
 app.get("/getData", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const data = yield db.query("SELECT * FROM books");
-    const books = data.rows;
-    res.json({ data: books });
-}));
-app.post("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const userSearched = req.body.search.trim();
     try {
-        console.log("HERE");
-        const searched = yield db.query(`SELECT * FROM books WHERE LOWER(bookname) LIKE '${userSearched.toLowerCase()}%'`);
-        const result = searched.rows;
-        console.log(result);
-        res.render("index.ejs", {
-            data: result,
-        });
+        const booksJSON = yield db.query("SELECT * FROM books");
+        const books = booksJSON.rows;
+        res.json({ data: books });
     }
     catch (err) {
-        console.log(err);
-        res.redirect("/");
+        console.log(err.message);
     }
 }));
 app.post("/getData", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    console.log(req.body);
-    const userSearched = req.body.searching;
     try {
+        const userSearched = req.body.searching;
         const searched = yield db.query(`SELECT * FROM books WHERE LOWER(bookname) LIKE '${userSearched.toLowerCase()}%'`);
         const result = searched.rows;
         res.json({ data: result });
     }
     catch (err) {
-        console.log(err);
+        console.log(err.message);
         res.json({ error: "Data not found." });
     }
 }));

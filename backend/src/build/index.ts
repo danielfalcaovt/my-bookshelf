@@ -1,5 +1,4 @@
-import express from "express";
-import ejs from "ejs";
+import express, {Request,Response,Error} from "express";
 import env from "dotenv";
 import cors from "cors";
 import pg from "pg";
@@ -26,49 +25,29 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-app.get("/", async (req, res) => {
-    const data = await db.query("SELECT * FROM books");
-    const books = data.rows;
-    res.render("index.ejs", {
-        data: books,
-    });
-});
 
-app.get("/getData", async (req, res) => {
-    const data = await db.query("SELECT * FROM books");
-    const books = data.rows;
-    res.json({ data: books });
-});
 
-app.post("/", async (req, res) => {
-    const userSearched:string = req.body.search.trim();
-    try {
-        console.log("HERE");
-        const searched = await db.query(
-            `SELECT * FROM books WHERE LOWER(bookname) LIKE '${userSearched.toLowerCase()}%'`
-        );
-        const result = searched.rows;
-        console.log(result);
-        res.render("index.ejs", {
-            data: result,
-        });
-    } catch (err) {
-        console.log(err);
-        res.redirect("/");
+app.get("/getData", async (req:Request, res:Response) => {
+    try{
+        const booksJSON = await db.query("SELECT * FROM books");
+        const books = booksJSON.rows;
+        res.json({ data: books });
+    }catch(err:Error) {
+        console.log(err.message);
     }
 });
-app.post("/getData",async(req,res)=>{
-        console.log(req.body);
-        const userSearched:string = req.body.searching;
-     try {
+
+app.post("/getData", async (req:Request, res:Response) => {
+    try {
+    const userSearched: string = req.body.searching;
         const searched = await db.query(
             `SELECT * FROM books WHERE LOWER(bookname) LIKE '${userSearched.toLowerCase()}%'`
         );
         const result = searched.rows;
-            res.json({data:result})
-        } catch (err) {
-        console.log(err);
-        res.json({error:"Data not found."})
+        res.json({ data: result });
+    } catch (err:Error) {
+        console.log(err.message);
+        res.json({ error: "Data not found." });
     }
 });
 

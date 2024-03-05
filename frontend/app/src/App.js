@@ -15,7 +15,7 @@ export default function App() {
       setData(data);
       console.log(data);
     } catch (err) {
-      setData("Data not found");
+      setIso("Data not found.")
       console.error(err);
     }
   };
