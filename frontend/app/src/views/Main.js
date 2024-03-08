@@ -4,26 +4,8 @@ export default function Main(props) {
       <section id="my-ratings">
         <div className="container">
           <div id="receiver">
-            {props.iso ? (
-              <>
-                <div>
-                  <h2 class="container-title">{props.iso.bookname}</h2>
-                  <img
-                    src={
-                      "https://covers.openlibrary.org/b/isbn/" +
-                      props.iso.isbn +
-                      "-M.jpg"
-                    }
-                    alt="book cover"
-                  />
-                  <p class="container-rating">{props.iso.rating}/ 10</p>
-                  <p class="container-note">{props.iso.note}</p>
-                </div>
-                <hr />
-              </>
-            ) : (
-              props.data &&
-              props.data.data.map((item) => {
+            {props.data && props.data.map((item) => {
+              console.log(props.data)
                 return (
                   <>
                     <div key={item.bookname}>
@@ -43,7 +25,7 @@ export default function Main(props) {
                   </>
                 );
               })
-            )}
+            }
           </div>
         </div>
       </section>

@@ -1,21 +1,16 @@
 import express, {Request,Response,Error} from "express";
 import env from "dotenv";
 import cors from "cors";
-import pg from "pg";
 import axios from "axios";
 import bodyParser from "body-parser";
+import pg from "pg";
 
 env.config();
+const { Pool } = pg;
 
-const db = new pg.Client({
-    user: "postgres",
-    host: "localhost",
-    database: process.env.DB_DATABASE,
-    password: process.env.DB_PASSWORD,
-    port: process.env.DB_PORT,
-});
-
-db.connect();
+const pool = new Pool({
+  connectionString: process.env.POSTGRES_URL ,
+})
 
 const app = express();
 const port = 5500;

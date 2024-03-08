@@ -2,50 +2,24 @@ import Header from "./views/Header";
 import Greetings from "./views/Greetings";
 import Main from "./views/Main";
 import "./styles/styles.css";
-import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect,useState } from "react";
+import bookData from "./data";
 
 export default function App() {
   const [data, setData] = useState();
-  const [isolated, setIso] = useState();
-  const getData = async () => {
-    try {
-      const response = await axios.get("http://localhost:5500/getData");
-      const data = response.data;
-      setData(data);
-      console.log(data);
-    } catch (err) {
-      setIso("Data not found.")
-      console.error(err);
-    }
-  };
   const [search, setSearch] = useState();
-  function handleSet() {
-    const searched = document.querySelector("#search");
-    const pesquisado = String(searched.value);
-    setSearch(pesquisado);
-  }
-  async function handleSearch(evt) {
-    evt.preventDefault();
-    try {
-      const response = await axios.post("http://localhost:5500/getData", {
-        searching: search,
-      });
-      const data = response.data;
-      console.log(data.data[0]);
-      setIso(data.data[0]);
-    } catch (err) {
-      console.error(err);
-    }
-  }
-  useEffect(() => {
-    getData();
-  }, []);
+
+  console.log(bookData);
+
+  useEffect(()=>{
+    setData(bookData);
+  },[data])
+
   return (
     <>
-      <Header func={handleSearch} handleSet={handleSet} />
+      <Header />
       <Greetings />
-      <Main data={data} iso={isolated} />
+      <Main data={data} />
       <footer>
         <div id="copyright">
           {`Copyright 2023 - ${new Date().getFullYear()} ©`}
