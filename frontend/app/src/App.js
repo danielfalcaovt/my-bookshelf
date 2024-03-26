@@ -9,15 +9,29 @@ export default function App() {
   const [data, setData] = useState();
   const [search, setSearch] = useState();
 
-  console.log(bookData);
+  function getInputTextToSearch(evt) {
+    const userInputText = evt.target.value;
+    console.log(userInputText);
+  };
+
+  function searchUserRequestInData() {
+    if (search.length > 0) {
+      const searchedData = data.filter((books)=>{
+        return books === search;
+      });
+      return searchedData;
+    }else {
+      console.error("Search can't be empty.")
+    };
+  };
 
   useEffect(()=>{
     setData(bookData);
-  },[data])
+  },[data]);
 
   return (
     <>
-      <Header />
+      <Header getInputTextToSearch={getInputTextToSearch} searchUserRequestInData={searchUserRequestInData}/>
       <Greetings />
       <Main data={data} />
       <footer>

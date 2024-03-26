@@ -1,11 +1,42 @@
+import { useEffect, useState } from "react";
+
 export default function Main(props) {
+  const [data, setData] = useState();
+
+  function handleData(bookData) {
+    if (bookData && bookData.length === 1) {
+      console.log(1);
+      setData(bookData[0]);
+    }else if (bookData && bookData.length > 1){
+      console.log(2);
+      bookData.map((book) => {
+        console.log(bookData);
+        console.log(book);
+        return setData((oldValue)=>{
+          return [
+            ...oldValue,
+            book
+          ];
+        });
+      });
+    }else{
+      setData("Error fetching data.")
+    };
+  };
+
+  console.log(data);
+
+  useEffect(()=>{
+    handleData(props.data);
+  },[props.data]);
+
   return (
     <main>
       <section id="my-ratings">
         <div className="container">
           <div id="receiver">
-            {props.data && props.data.map((item) => {
-              console.log(props.data)
+            {data && data.map((item) => {
+              console.log(data)
                 return (
                   <>
                     <div key={item.bookname}>
@@ -14,7 +45,7 @@ export default function Main(props) {
                         src={
                           "https://covers.openlibrary.org/b/isbn/" +
                           item.isbn +
-                          "-M.jpg"
+                          "-M.jpg" 
                         }
                         alt="book cover"
                       />
@@ -24,8 +55,7 @@ export default function Main(props) {
                     <hr />
                   </>
                 );
-              })
-            }
+              })};
           </div>
         </div>
       </section>
