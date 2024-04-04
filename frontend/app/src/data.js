@@ -28,7 +28,7 @@ const bookData = [
     isbn: "9788576082675",
     rating: 10,
     note: "Excellent book, looking for programming knowledge? you will find here.",
-  },
+  }
 ];
 
 export default bookData;

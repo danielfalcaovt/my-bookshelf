@@ -1,34 +1,8 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { DataContext } from "../context/DataContext";
 
-export default function Main(props) {
-  const [data, setData] = useState();
-
-  function handleData(bookData) {
-    if (bookData && bookData.length === 1) {
-      console.log(1);
-      setData(bookData[0]);
-    }else if (bookData && bookData.length > 1){
-      console.log(2);
-      bookData.map((book) => {
-        console.log(bookData);
-        console.log(book);
-        return setData((oldValue)=>{
-          return [
-            ...oldValue,
-            book
-          ];
-        });
-      });
-    }else{
-      setData("Error fetching data.")
-    };
-  };
-
-  console.log(data);
-
-  useEffect(()=>{
-    handleData(props.data);
-  },[props.data]);
+export default function Main() {
+  const {data, setData} = useContext(DataContext);
 
   return (
     <main>
@@ -36,7 +10,6 @@ export default function Main(props) {
         <div className="container">
           <div id="receiver">
             {data && data.map((item) => {
-              console.log(data)
                 return (
                   <>
                     <div key={item.bookname}>
@@ -54,11 +27,11 @@ export default function Main(props) {
                     </div>
                     <hr />
                   </>
-                );
-              })};
+                )
+              })}
           </div>
         </div>
       </section>
     </main>
-  );
+  )
 }

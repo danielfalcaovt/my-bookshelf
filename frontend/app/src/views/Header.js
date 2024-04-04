@@ -1,4 +1,22 @@
-export default function Header(props) {
+import { useContext, useState } from "react";
+import { DataContext } from "../context/DataContext";
+
+export default function Header() {
+    const [inputValue, setInputValue] = useState();
+    const {data, setData} = useContext(DataContext);
+
+    function handleChange(evt) {
+        setInputValue(evt.target.value);
+    }
+    
+    function handleSubmit(evt) {
+        evt.preventDefault();
+        const foundBook = data.filter((book)=>{
+            return book.bookname === inputValue;
+        })
+        setData(foundBook);
+    }
+
     return(
         <header>
             <nav>
@@ -6,8 +24,8 @@ export default function Header(props) {
                     <h1 draggable="true">BOOKSHELF</h1>
                 </a>
 
-                <form onSubmit={props.func}  method="post" autoComplete="off">
-                    <input onChange={props.handleSet} placeholder="Search..." type="text" name="search" id="search"/>
+                <form onSubmit={handleSubmit}  method="post" autoComplete="off">
+                    <input onChange={handleChange} placeholder="Search..." type="text" name="search" id="search"/>
                 </form>
                 
                 <a className="button" rel="noreferrer" target="_blank" href="https://github.com/danielfalcaovt">
