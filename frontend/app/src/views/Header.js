@@ -1,21 +1,8 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { DataContext } from "../context/DataContext";
 
 export default function Header() {
-    const [inputValue, setInputValue] = useState();
     const {data, setData} = useContext(DataContext);
-
-    function handleChange(evt) {
-        setInputValue(evt.target.value);
-    }
-    
-    function handleSubmit(evt) {
-        evt.preventDefault();
-        const foundBook = data.filter((book)=>{
-            return book.bookname === inputValue;
-        })
-        setData(foundBook);
-    }
 
     return(
         <header>
@@ -24,8 +11,17 @@ export default function Header() {
                     <h1 draggable="true">BOOKSHELF</h1>
                 </a>
 
-                <form onSubmit={handleSubmit}  method="post" autoComplete="off">
-                    <input onChange={handleChange} placeholder="Search..." type="text" name="search" id="search"/>
+                <form onSubmit={e => e.preventDefault()}  method="post" autoComplete="off">
+                    <input 
+                        onChange={e => setData((oldValue) => ({
+                        ...oldValue,
+                        search: e.target.value
+                        }))} 
+                        placeholder="Search..."
+                        type="text"
+                        value={data?.search}
+                        name="search"
+                        id="search"/>
                 </form>
                 
                 <a className="button" rel="noreferrer" target="_blank" href="https://github.com/danielfalcaovt">

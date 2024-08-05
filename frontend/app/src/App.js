@@ -11,7 +11,7 @@ export default function App() {
   const [data, setData] = useState();
 
   useEffect(() => {
-    setData(bookData);
+    setData({ books: bookData });
   }, []);
 
   return (
@@ -19,7 +19,7 @@ export default function App() {
       <DataContext.Provider value={{ data, setData }}>
         <Header/>
         <Greetings />
-        <Main data={data} />
+        <Main />
         <Footer />
       </DataContext.Provider>
     </>

@@ -243,7 +243,6 @@ footer{
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 30vh;
-    margin-top: 15px;
     background: linear-gradient(to right, #060606 10%, #141414 40%);
 }
 

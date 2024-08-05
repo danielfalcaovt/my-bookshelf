@@ -2,9 +2,9 @@ export default function Greetings() {
     return(
         <section id="greetings">
             <article>
-                <h1>Welcome to my Bookshelf.</h1>
-                <p>There are all the books i've read in all my days on earth and what i'd thought about them. just remember that i am not a professional book rater. i am just a developer and curious guy. 😉</p>
-                <p>I Hope you have fun acrossing this project!</p>
+                <h1>Bem vindo ao Meu Mundo Literário.</h1>
+                <p>Aqui você vai encontrar todos os livros que eu já li junto da minha humilde opinião sobre os mesmos. Lembrando que não sou nenhum expertise literário, apenas um leitor comum! 😉</p>
+                <p>Eu espero que você consiga tirar proveito de tudo!</p>
             </article>
         </section>
     )
