@@ -9,37 +9,67 @@ const bookData = [
     bookname: "Código Limpo - Martin",
     isbn: "9788576082675",
     rating: 10,
-    note: "Excelente, Martin aborda excepcionalmente conceitos essenciais para manter um código limpo.",
+    note: "Excepcional. Dispensa comentários.",
   },
   {
-    bookname: 'Verity - Collen Hoover',
-    isbn: '9781538724736',
-    rating: 10,
-    note: 'O melhor thriller que eu já li disparado.'
-  },
-  {
-    bookname: 'Layla - Collen Hoover',
-    isbn: '9781542000178',
+    bookname: "Arte & Alma",
+    isbn: "9788501115584",
     rating: 7,
-    note: 'Um bom livro de terror/suspense mas fica um pouco estranho no meio do caminho.'
+    note: "Um romance casual.",
   },
   {
-    bookname: 'Como Pensar Sobre as Grandes Ideias - Adler',
-    isbn: '9788580331417',
+    bookname: "Você ligou para o SAM",
+    isbn: "9786588131459",
+    rating: 4,
+    note: "Apresenta uma premissa interessante, mas o autor não soube explora-la."
+  },
+  {
+    bookname: "Verity - Collen Hoover",
+    isbn: "9781538724736",
+    rating: 10,
+    note: "O melhor thriller que eu já li disparado.",
+  },
+  {
+    bookname: "Layla - Collen Hoover",
+    isbn: "9781542000178",
     rating: 9,
-    note: 'Adler aborda todos os assuntos junto de seu auxiliar de forma incomparável.'
+    note: "Perfeito e Estranho. Tendo em vista que, é a primeira vez que ela escreve nesse gênero",
   },
   {
-    bookname: 'As Coisas que Você só vê Quando Desacelera',
-    isbn: '9788543105291',
-    rating: 10,
-    note: 'Um dos livros que moldou a pessoa quem sou.'
+    bookname: "Como Pensar Sobre as Grandes Ideias - Adler",
+    isbn: "9788580331417",
+    rating: 7,
+    note: "Uma boa introdução à filosofia.",
   },
   {
-    bookname: 'A Fábrica de Cretinos Digitais',
-    isbn: '9786586551525',
-    rating: 10,
-    note: 'Livro essencial para todos os pertencentes à geração Z.'
+    bookname: "As Coisas que Você só vê Quando Desacelera",
+    isbn: "9788543105291",
+    rating: 8,
+    note: "Causa uma relevante mudança na sua perspectiva sobre alguns aspectos da vida.",
+  },
+  {
+    bookname: "A Fábrica de Cretinos Digitais",
+    isbn: "9786586551525",
+    rating: 8,
+    note: "Livro essencial para todos os pertencentes à geração Z.",
+  },
+  {
+    bookname: "O Capote - Nikolai Gogól",
+    isbn: "9788573264562",
+    rating: 9,
+    note: "Um dos clássicos indispensáveis da literatura russa.",
+  },
+  {
+    bookname: "A Morte de Ivan Ilitch",
+    isbn: '8573263598',
+    rating: 9,
+    note: "Uma reflexão ábilmente traçada por tolstói, relacionado a importância que damos à coisas fúteis."
+  },
+  {
+    bookname: 'Fortaleza Digital',
+    isbn: '8575421611',
+    rating: 8,
+    note: 'Ótimo thriller tecnológico de Dan Brown. Explora os limites da ganância do homem.'
   }
 ];
 
