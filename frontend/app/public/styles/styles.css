@@ -91,6 +91,9 @@ form {
 
 .button {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: max-content;
     justify-self: flex-end;
 }
