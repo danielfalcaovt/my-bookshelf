@@ -374,3 +374,13 @@ footer > #socialmedia > ul{
 #img-not-found {
     width: 100%;
 }
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #272727;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 25px;
+    background-image: linear-gradient(to bottom, #444444, #a1a1a1);
+}
