@@ -7,15 +7,16 @@
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "font-awesome": "^4.7.0",
-    "pg": "^8.11.3"
+    "pg": "^8.11.3",
+    "redis": "^4.7.0"
   },
   "name": "projeto-avaliadordelivros",
   "version": "1.0.0",
   "main": "index.ts",
   "type": "module",
   "scripts": {
-    "build": "tsc -w",
-    "dev": "node ./src/dist/index.js",
+    "build": "tsc",
+    "dev": "node ./dist/build/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -23,7 +24,13 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@types/body-parser": "^1.19.5",
+    "@types/cors": "^2.8.17",
+    "@types/dotenv": "^6.1.1",
+    "@types/express": "^5.0.0",
     "@types/node": "^20.11.19",
+    "@types/pg": "^8.11.10",
+    "@types/redis": "^4.0.10",
     "@typescript-eslint/eslint-plugin": "^7.0.2",
     "@typescript-eslint/parser": "^7.0.2",
     "eslint": "^8.56.0",

@@ -2,7 +2,6 @@ import Header from "./views/Header";
 import Greetings from "./views/Greetings";
 import Main from "./views/Main";
 import Footer from "./views/Footer";
-import "./styles/styles.css";
 import { useEffect, useState } from "react";
 import bookData from "./data";
 import { DataContext } from "./context/DataContext";

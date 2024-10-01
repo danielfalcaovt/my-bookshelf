@@ -47,6 +47,7 @@ nav h1 {
     align-items: center;
     justify-content: flex-start;
     text-decoration: none;
+    width: max-content;
     margin-left: 25px;
 }
 
@@ -90,6 +91,8 @@ form {
 
 .button {
     position: relative;
+    width: max-content;
+    justify-self: flex-end;
 }
 
 svg {
@@ -214,6 +217,7 @@ article {
 img {
     width: 100px;
     grid-area: 1/1/4/1;
+    margin: auto;
 }
 
 .container-note {
@@ -365,4 +369,8 @@ footer > #socialmedia > ul{
     #ham--lineDown {
         width: 35px;
     }
+}
+
+#img-not-found {
+    width: 100%;
 }

@@ -1,75 +1,81 @@
 const bookData = [
   {
-    bookname: "Cosmos - Carl Sagan",
+    bookname: "Cosmos",
     isbn: "9788535929881",
-    rating: 9,
+    rating: 8,
     note: "Um excelente mergulho na imensidão do universo.",
   },
   {
-    bookname: "Código Limpo - Martin",
+    bookname: "Código Limpo",
     isbn: "9788576082675",
-    rating: 10,
-    note: "Excepcional. Dispensa comentários.",
+    rating: 7,
+    note: "Excepcional.",
   },
   {
     bookname: "Arte & Alma",
-    isbn: "9788501115584",
-    rating: 7,
-    note: "Um romance casual.",
+    img: "arte-e-alma.png",
+    rating: 5,
+    note: "Um romance comum com drama.",
   },
   {
     bookname: "Você ligou para o SAM",
-    isbn: "9786588131459",
+    img: "voce-ligou.png",
     rating: 4,
-    note: "Apresenta uma premissa interessante, mas o autor não soube explora-la."
+    note: "Apresenta uma premissa interessante, mas o autor não soube explorá-la."
   },
   {
-    bookname: "Verity - Collen Hoover",
+    bookname: "Verity",
     isbn: "9781538724736",
     rating: 10,
-    note: "O melhor thriller que eu já li disparado.",
+    note: "Um dos melhores thrillers que eu já li.",
   },
   {
-    bookname: "Layla - Collen Hoover",
+    bookname: "Layla",
     isbn: "9781542000178",
     rating: 9,
-    note: "Perfeito e Estranho. Tendo em vista que, é a primeira vez que ela escreve nesse gênero",
+    note: "Bom. Tendo em vista que, foi a primeira vez em que ela escreveu nesse gênero",
   },
   {
-    bookname: "Como Pensar Sobre as Grandes Ideias - Adler",
-    isbn: "9788580331417",
-    rating: 7,
+    bookname: "Como Pensar Sobre as Grandes Ideias",
+    img: "como-pensar.png",
+    rating: 6,
     note: "Uma boa introdução à filosofia.",
   },
   {
     bookname: "As Coisas que Você só vê Quando Desacelera",
     isbn: "9788543105291",
-    rating: 8,
-    note: "Causa uma relevante mudança na sua perspectiva sobre alguns aspectos da vida.",
+    rating: 6,
+    note: "Pode fazer uma grande diferença na vida de pessoas que tem a mente aberta.",
   },
   {
     bookname: "A Fábrica de Cretinos Digitais",
-    isbn: "9786586551525",
+    img: 'a-fabrica.png',
     rating: 8,
     note: "Livro essencial para todos os pertencentes à geração Z.",
   },
   {
-    bookname: "O Capote - Nikolai Gogól",
-    isbn: "9788573264562",
-    rating: 9,
-    note: "Um dos clássicos indispensáveis da literatura russa.",
+    bookname: "O Capote",
+    img: 'o-capote.png',
+    rating: 7,
+    note: "Excelente livro, alem de um pequeno mergulho na literatura russa.",
   },
   {
     bookname: "A Morte de Ivan Ilitch",
     isbn: '8573263598',
     rating: 9,
-    note: "Uma reflexão ábilmente traçada por tolstói, relacionado a importância que damos à coisas fúteis."
+    note: "Uma reflexão hábilmente traçada por Tolstói, relacionado a importância que damos à coisas fúteis."
   },
   {
     bookname: 'Fortaleza Digital',
     isbn: '8575421611',
     rating: 8,
     note: 'Ótimo thriller tecnológico de Dan Brown. Explora os limites da ganância do homem.'
+  },
+  {
+    bookname: 'Nunca Estivemos Aqui',
+    img: 'nunca-estivemos-aqui.png',
+    rating: 7,
+    note: 'Thriller de Andrea Bartz, que explora bem a confiança que depositamos nas pessoas.'
   }
 ];
 

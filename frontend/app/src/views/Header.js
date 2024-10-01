@@ -17,7 +17,7 @@ export default function Header() {
                         ...oldValue,
                         search: e.target.value
                         }))} 
-                        placeholder="Search..."
+                        placeholder="Nome do Livro"
                         type="text"
                         value={data?.search}
                         name="search"
