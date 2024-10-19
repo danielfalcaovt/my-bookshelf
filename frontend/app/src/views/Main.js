@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { DataContext } from "../context/DataContext";
 
 export default function Main() {
-  const { data, setData } = useContext(DataContext);
+  const { data } = useContext(DataContext);
   const filteredBooks =
     data && data.search?.length > 0
       ? data.books.filter((b) =>
@@ -24,7 +24,7 @@ export default function Main() {
                       <>
                         <div key={item.bookname}>
                           <h2 class="container-title">{item.bookname}</h2>
-                          <img src={item.img} alt="book cover" />
+                          <img src={`/assets/book-covers/${item.img}`} alt="book cover" />
                           <p class="container-rating">{item.rating} / 10</p>
                           <p class="container-note">{item.note}</p>
                         </div>
@@ -40,27 +40,10 @@ export default function Main() {
                       <>
                         <div key={item.bookname}>
                           <h2 class="container-title">{item.bookname}</h2>
-                          {item.isbn?.length > 0 ? (
-                            <img
-                              src={
-                                "https://covers.openlibrary.org/b/isbn/" +
-                                item.isbn +
-                                "-M.jpg"
-                              }
-                              alt="book cover"
-                            />
-                          ) : item.img?.length > 0 ? (
-                            <img
-                              src={`/assets/book-covers/${item.img}`}
-                              alt="book cover"
-                            />
-                          ) : (
-                            <img
-                              id="img-not-found"
-                              src={"/assets/image-not-found.png"}
-                              alt="book cover"
-                            />
-                          )}
+                          <img
+                            src={`/assets/book-covers/${item.img}`}
+                            alt="book cover"
+                          />
                           <p class="container-rating">{item.rating} / 10</p>
                           <p class="container-note">{item.note}</p>
                         </div>
