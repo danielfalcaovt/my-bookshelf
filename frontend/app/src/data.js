@@ -1,13 +1,13 @@
 const bookData = [
   {
     bookname: "Cosmos",
-    isbn: "9788535929881",
+    img: "cosmos.jpg",
     rating: 8,
     note: "Um excelente mergulho na imensidão do universo.",
   },
   {
     bookname: "Código Limpo",
-    isbn: "9788576082675",
+    img: "codigo-limpo.jpg",
     rating: 7,
     note: "Excepcional.",
   },
@@ -25,13 +25,13 @@ const bookData = [
   },
   {
     bookname: "Verity",
-    isbn: "9781538724736",
+    img: "verity.jpg",
     rating: 10,
     note: "Um dos melhores thrillers que eu já li.",
   },
   {
     bookname: "Layla",
-    isbn: "9781542000178",
+    img: "layla.jpg",
     rating: 9,
     note: "Bom. Tendo em vista que, foi a primeira vez em que ela escreveu nesse gênero",
   },
@@ -43,7 +43,7 @@ const bookData = [
   },
   {
     bookname: "As Coisas que Você só vê Quando Desacelera",
-    isbn: "9788543105291",
+    img: "as-coisas.jpg",
     rating: 6,
     note: "Pode fazer uma grande diferença na vida de pessoas que tem a mente aberta.",
   },
@@ -61,13 +61,13 @@ const bookData = [
   },
   {
     bookname: "A Morte de Ivan Ilitch",
-    isbn: '8573263598',
+    img: 'a-morte.jpg',
     rating: 9,
     note: "Uma reflexão hábilmente traçada por Tolstói, relacionado a importância que damos à coisas fúteis."
   },
   {
     bookname: 'Fortaleza Digital',
-    isbn: '8575421611',
+    img: 'fortaleza-digital.jpg',
     rating: 8,
     note: 'Ótimo thriller tecnológico de Dan Brown. Explora os limites da ganância do homem.'
   },
