@@ -21,7 +21,7 @@ const bookData = [
     bookname: "Você ligou para o SAM",
     img: "voce-ligou.png",
     rating: 4,
-    note: "Apresenta uma premissa interessante, mas o autor não soube explorá-la."
+    note: "Apresenta uma premissa interessante, mas o autor não soube explorá-la.",
   },
   {
     bookname: "Verity",
@@ -49,34 +49,34 @@ const bookData = [
   },
   {
     bookname: "A Fábrica de Cretinos Digitais",
-    img: 'a-fabrica.png',
+    img: "a-fabrica.png",
     rating: 8,
     note: "Livro essencial para todos os pertencentes à geração Z.",
   },
   {
     bookname: "O Capote",
-    img: 'o-capote.png',
+    img: "o-capote.png",
     rating: 7,
     note: "Excelente livro, alem de um pequeno mergulho na literatura russa.",
   },
   {
     bookname: "A Morte de Ivan Ilitch",
-    img: 'a-morte.jpg',
+    img: "a-morte.jpg",
     rating: 9,
-    note: "Uma reflexão hábilmente traçada por Tolstói, relacionado a importância que damos à coisas fúteis."
+    note: "Uma reflexão hábilmente traçada por Tolstói, relacionado a importância que damos à coisas fúteis.",
   },
   {
-    bookname: 'Fortaleza Digital',
-    img: 'fortaleza-digital.jpg',
+    bookname: "Fortaleza Digital",
+    img: "fortaleza-digital.jpg",
     rating: 8,
-    note: 'Ótimo thriller tecnológico de Dan Brown. Explora os limites da ganância do homem.'
+    note: "Ótimo thriller tecnológico de Dan Brown. Explora os limites da ganância do homem.",
   },
   {
-    bookname: 'Nunca Estivemos Aqui',
-    img: 'nunca-estivemos-aqui.png',
+    bookname: "Nunca Estivemos Aqui",
+    img: "nunca-estivemos-aqui.png",
     rating: 7,
-    note: 'Thriller de Andrea Bartz, que explora bem a confiança que depositamos nas pessoas.'
-  }
+    note: "Thriller de Andrea Bartz, que explora bem a confiança que depositamos nas pessoas.",
+  },
 ];
 
 export default bookData;

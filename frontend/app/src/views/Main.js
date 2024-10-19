@@ -24,16 +24,13 @@ export default function Main() {
                       <>
                         <div key={item.bookname}>
                           <h2 class="container-title">{item.bookname}</h2>
-                          <img
-                            src={item.img}
-                            alt="book cover"
-                          />
+                          <img src={item.img} alt="book cover" />
                           <p class="container-rating">{item.rating} / 10</p>
                           <p class="container-note">{item.note}</p>
                         </div>
                         <hr />
                       </>
-                    )
+                    );
                   })
               : data?.books &&
                 data?.books

@@ -16,7 +16,7 @@ export default function App() {
   return (
     <>
       <DataContext.Provider value={{ data, setData }}>
-        <Header/>
+        <Header />
         <Greetings />
         <Main />
         <Footer />
