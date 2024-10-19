@@ -25,13 +25,7 @@ export default function Main() {
                         <div key={item.bookname}>
                           <h2 class="container-title">{item.bookname}</h2>
                           <img
-                            src={
-                              item.isbn?.length > 0
-                                ? "https://covers.openlibrary.org/b/isbn/" +
-                                  item.isbn +
-                                  "-M.jpg"
-                                : ""
-                            }
+                            src={item.img}
                             alt="book cover"
                           />
                           <p class="container-rating">{item.rating} / 10</p>
@@ -39,7 +33,7 @@ export default function Main() {
                         </div>
                         <hr />
                       </>
-                    );
+                    )
                   })
               : data?.books &&
                 data?.books
