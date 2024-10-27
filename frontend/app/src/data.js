@@ -77,6 +77,12 @@ const bookData = [
     rating: 7,
     note: "Thriller de Andrea Bartz, que explora bem a confiança que depositamos nas pessoas.",
   },
+  {
+    bookname: "1984 - George Orwell",
+    img: "1984.jpg",
+    rating: 10,
+    note: "Um romance distópico traçado por George Orwell, que reflete muito sobre a moldagem da mente humana, e sobre como, com o gatilho certo, e o uso de uma emoção certa, coletivamente, podemos até mesmo as massas."
+  }
 ];
 
 export default bookData;
