@@ -40,10 +40,14 @@ export default function Main() {
                       <>
                         <div key={item.bookname}>
                           <h2 class="container-title">{item.bookname}</h2>
-                          <img
-                            src={`/assets/book-covers/${item.img}`}
-                            alt="book cover"
-                          />
+                          <div id="book-cover">
+                            <img
+                              src={`/assets/book-covers/${item.img}`}
+                              alt="book cover"
+                            />
+                            <div id="book-paper-effect"></div>
+                            <div id="book-back-effect" style={{background: item.coverColor || 'rgb(49, 41, 25)'}}></div>
+                          </div>
                           <p class="container-rating">{item.rating} / 10</p>
                           <p class="container-note">{item.note}</p>
                         </div>
