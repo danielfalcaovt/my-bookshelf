@@ -297,6 +297,10 @@ footer > #copyright {
   margin-left: 15px;
 }
 
+footer >span {
+  width: 100%;
+}
+
 footer > #socialmedia {
   display: flex;
   justify-content: center;
@@ -351,7 +355,7 @@ footer > #socialmedia > ul {
 
   #receiver > div {
     grid-template-columns: 1fr;
-    grid-template-rows: 3fr 0.3fr 0.3fr 0.3fr;
+    grid-template-rows: 2fr 0.3fr 0.3fr 0.3fr;
     padding: 20px;
   }
 
@@ -368,6 +372,10 @@ footer > #socialmedia > ul {
     font-size: 1.2rem;
     grid-area: 2/1/2/3;
     margin: 0px;
+  }
+
+  #book-cover {
+    grid-area: 1/1/1/1;
   }
 
   .container-note {
@@ -408,6 +416,11 @@ footer > #socialmedia > ul {
 
   #ham--lineDown {
     width: 35px;
+  }
+
+  footer > #copyright {
+    grid-area: 1/1/1/4;
+    font-size: 1.3rem;
   }
 }
 
