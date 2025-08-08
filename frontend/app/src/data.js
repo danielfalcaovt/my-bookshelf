@@ -123,6 +123,13 @@ const bookData = [
     note: "Thiago Nigro ensina conceitos práticos de finanças pessoais e investimentos, mostrando como acumular patrimônio sem abrir mão dos pequenos prazeres.",
     coverColor: "#000000",
   },
+  {
+    bookname: "A Psicologia Financeira",
+    img: "psicologia-finan.jpg",
+    rating: 8,
+    note: "Morgan Housel explora como emoções, experiências pessoais e percepções influenciam nossas decisões financeiras mais do que fórmulas e teorias econômicas.",
+    coverColor: "#1E3A5F",
+  },
 ];
 
 export default bookData;
