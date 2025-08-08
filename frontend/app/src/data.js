@@ -102,6 +102,27 @@ const bookData = [
     note: "Best seller de Matt Haig reflete sobre a ilusão da vida ideal e como a busca incessante por ela muitas vezes é vazia, já que o que mais queremos pode estar bem diante de nós.",
     coverColor: "#192B2F",
   },
+  {
+    bookname: "Os Segredos da Mente Milionária",
+    img: "segredos-mente-milionaria.jpg",
+    rating: 8,
+    note: "T. Harv Eker explora como crenças e hábitos moldam nossa relação com o dinheiro, mostrando que a verdadeira riqueza começa com a mentalidade certa.",
+    coverColor: "#FFD700",
+  },
+  {
+    bookname: "O Homem Mais Rico da Babilônia",
+    img: "homem-mais-rico-babilonia.jpg",
+    rating: 9,
+    note: "George S. Clason apresenta princípios financeiros atemporais por meio de parábolas ambientadas na antiga Babilônia, ensinando disciplina, poupança e investimentos.",
+    coverColor: "#A67C52",
+  },
+  {
+    bookname: "Do Mil ao Milhão Sem Cortar o Cafézinho",
+    img: "mil-ao-milhao.jpg",
+    rating: 8,
+    note: "Thiago Nigro ensina conceitos práticos de finanças pessoais e investimentos, mostrando como acumular patrimônio sem abrir mão dos pequenos prazeres.",
+    coverColor: "#000000",
+  },
 ];
 
 export default bookData;
